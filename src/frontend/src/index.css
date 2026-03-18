@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/Fraunces.woff2") format("woff2");
+  font-weight: 300 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Earthy palette: warm greens, ochre, deep brown, off-white */
+    --background: 97 0.012 85;
+    --foreground: 22 0.04 30;
+
+    --card: 96 0.01 90;
+    --card-foreground: 22 0.04 30;
+
+    --popover: 97 0.012 85;
+    --popover-foreground: 22 0.04 30;
+
+    /* Deep teal for CTAs */
+    --primary: 0.42 0.09 195;
+    --primary-foreground: 97 0.01 98;
+
+    /* Warm ochre secondary */
+    --secondary: 0.78 0.1 75;
+    --secondary-foreground: 22 0.04 20;
+
+    --muted: 94 0.015 80;
+    --muted-foreground: 45 0.03 45;
+
+    /* Amber/ochre accent */
+    --accent: 0.72 0.13 68;
+    --accent-foreground: 22 0.04 18;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 97 0.01 98;
+
+    --border: 90 0.02 78;
+    --input: 90 0.02 78;
+    --ring: 0.42 0.09 195;
+
+    --radius: 0.5rem;
+
+    /* Chart colors */
+    --chart-1: 0.52 0.12 145;
+    --chart-2: 0.65 0.14 68;
+    --chart-3: 0.42 0.09 195;
+    --chart-4: 0.58 0.1 32;
+    --chart-5: 0.72 0.09 110;
+
+    /* Sidebar */
+    --sidebar: 94 0.015 80;
+    --sidebar-foreground: 22 0.04 30;
+    --sidebar-primary: 0.42 0.09 195;
+    --sidebar-primary-foreground: 97 0.01 98;
+    --sidebar-accent: 0.78 0.1 75;
+    --sidebar-accent-foreground: 22 0.04 20;
+    --sidebar-border: 90 0.02 78;
+    --sidebar-ring: 0.42 0.09 195;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Fraunces", serif;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .counter-animate {
+    transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
